@@ -1,5 +1,7 @@
 
 import streamlit as st
+st.set_page_config(page_title="דשבורד מדד הסלולר", layout="wide")
+
 import pandas as pd
 
 @st.cache_data
@@ -14,9 +16,9 @@ def load_data():
     }
 
 data = load_data()
-st.set_page_config(page_title="דשבורד מדד הסלולר", layout="wide")
 st.title("📱 דשבורד אינטראקטיבי – מדד הסלולר בישראל")
 
+# ניווט בין נושאים
 tab_names = list(data.keys())
 tabs = st.tabs(tab_names)
 
